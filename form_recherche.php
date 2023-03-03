@@ -14,9 +14,14 @@ require('header.php');
 ?>
 <div class="carreform">
   <h1>Chercher dans les tréfonds d'Internet :</h1>
-  <form>
-    <input type="text" placeholder="Recherche...">
+  <form action='reponse_recherche.php' method="POST">
+    <input type="text" name="search" placeholder="Recherche...">
     <button type="submit">Rechercher</button>
+    <?php
+                    if (empty($_GET['erreur'])) {
+                        echo '<span>Erreur, veuillez réessayer</span>';
+                    }
+                ?>
   </form>
 </div>
 
