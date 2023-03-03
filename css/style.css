@@ -1,0 +1,402 @@
+/* Relier les font que l'on souhaite */
+
+@font-face{
+    font-family:'Horror';
+    src: url("/donnees/horrorfont/EightiesHorror-ytJe.ttf") format('truetype')
+}
+
+/* Mise en page du Body */
+body{
+    background-color: #040404;
+    color:rgb(255, 255, 255);
+    min-width:360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+    position: absolute;
+    top:16%;
+    width: 100%;
+  }
+
+
+
+/*--------------------------------------------------------------------------------------*/
+
+
+
+/* Mise en page du header pour grand écran (+460px) */
+
+
+  a {
+    color:#B8B8B8;
+    font-style:"Horror";
+  }
+  
+  /* CSS du Header */
+  
+  .header {
+    background-color: #440404;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #440404;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #440404;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #680707;
+  }
+  
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  /* CSS du menu simple */
+  
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* CSS menu BURGER */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #e8e4e4;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu hamburger */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* Header pour téléphone */
+  
+  @media (min-width: 480px) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+
+
+/* Système audio site */
+
+/* Banner pour chaque site */
+
+.Banner{
+  position: relative;
+  top: -70px;
+}
+#bob{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  position: relative;
+  
+}
+
+/*------------------------------------------------------------------------------------*/
+
+
+
+/* Mise en page du footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    margin: auto;
+    width: 100%;
+    color:white;
+    bottom: 0;
+    background-color: #440404;
+}
+
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
+/*Mise en page du fichier index */
+
+
+main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+section { /* Parent*/
+  
+  width: 70%;
+  padding-right: 10px;
+  display: flex;
+  margin: 0px auto 0px auto;
+  flex-direction: column;
+}
+
+.partage{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+
+}
+
+#felimg{ /* Image Feldup*/
+  width: 250px;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 35px;
+}
+
+.txt{ /* Titre description */
+  width: 100%;
+}
+
+.txt h2 { /* Description */
+  font-size:18px;
+  border: 1px solid black;
+  margin: 10px;
+}
+.illu { /* Container des liens vidéos youtube */
+  
+  float: right;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Passage vers écran PC plus petit et téléphone (Pour garder un aspect ergonomique même sur petit écran de pc */
+
+
+@media (max-width: 1150px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #felimg {
+    margin-bottom: 10px;
+  }
+
+  .illu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+
+}
+
+
+
+/*Système Vidéo intégré*/
+
+
+
+.video-container { /* Parent container des vidéos pour formater la taille etc ... */
+  position: relative;
+  width: 150%;
+  height: 40%;
+  float: right;
+  padding-bottom: 56.25%; /* proportion 16:9 */
+  margin: 0px auto 0px auto;
+  z-index: 1;
+  display: flex;
+  right:20%;
+}
+
+.video-container iframe { /* Image 'frame' qui donne l'aspect sur la cover de la vidéo */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+}
+
+
+/* Passage des liens vidéos sur la version des écrans plus petit et téléphone */
+
+
+@media (max-width: 1150px) {
+  .video-container iframe {
+    position: absolute;
+    left: 0;
+    width: 70%;
+    height: 70%;
+    border: none;
+    display: flex;
+    left:15%;
+  }
+
+}
+
+
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
+/* Mise en page du fichier listing */
+
+
+.tabimg{ /* Parent container données différent du site */
+    display:flex;
+    flex-wrap:wrap;
+    margin: 16px 5px;
+    justify-content: center; 
+
+}
+.desc{ /* Enfant de tabimg description des données */
+    display:flex;
+    background-color: white;
+    color:black;
+    width:360px;
+    height: auto;
+    margin: 5px 3%;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+img { /* Enfant image de tabimg pour les données */
+    width:170px;
+    height: 150px;
+    margin: 10px 10px;
+    box-shadow: 0px 0px 10px 0px #040404;
+}
+
+
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
+/* Mise en page de la page recherche */
+
+form { /* Formulaire de recherche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:auto;
+  }
+
+.carreform{ /* Espace parent contenant le formulaire en lui */
+  display:flex;
+  margin: 16px 5px;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  
+}
+  
+  input[type="text"] { /* Espace pour écrire la recherche */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  button[type="submit"] { /* Boutton d'envois recherche */
+    background-color: #1e1e2d;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover { /* Hover du boutton d'envois */
+    background-color: #1a1a3f;
+  }
