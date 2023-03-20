@@ -23,7 +23,7 @@ require('header.php');
                 <p>Feldup est un YouTubeur français de plus d'un million d'abonnés (1.9m). Il fait principalement des vidéos parlant du monde de l'horreur, 
                     de la musique et des ARGs (Alternate Reality Game). Il est surtout connu pour son émission Findings, qui traite de plusieurs 
                     sujets qu'il a envie d'aborder et qu'il trouve intéressants par leur mystère. C'est un bon créateur si vous chercher à vous informer
-                    sur l'horreur et ses alentours.</p>
+                    sur l'horreur et ses alentours. Oui</p>
             </div>
         
             <div class="illu">
