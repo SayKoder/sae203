@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,9 @@
 require('header.php');
 ?>
 
-<p>Hello !</p>
+<a href="../index.php">Retour aux tréfonds</a>
+<a href="../table1_gestion.php">Tableau des Mythes</a> 	
+<a href="../table2_gestion.php">Tableau des Créateurs</a> 	
 
 <?php
 // Appel du Pied de Page

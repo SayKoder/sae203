@@ -27,7 +27,7 @@
 </header>
 
     <div class="Banner">
-        <img id="bob" src="photos/yeuxh.png" alt="">
+        <img id="bob" src="images/yeuxh.png" alt="">
     </div>
 
 </html>
