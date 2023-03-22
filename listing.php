@@ -17,11 +17,12 @@ require('header.php');
 <?php
     $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'CarlPHP02#');
                 $mabd->query('SET NAMES utf8;');
-                $req = "SELECT * FROM Mythes
-                            INNER JOIN Createur
-                            ON Mythes._crea_id = Createur.crea_id";
+                $req = "SELECT * FROM mythes
+                            INNER JOIN createur
+                            ON mythes._crea_id = createur.crea_id";
                 $resultat = $mabd->query($req);
                 foreach ($resultat as $value) {
+                    echo '<div class="card">';
                     echo '<img class="dimg" src=images/uploads/'.$value['mARG_photo'].'>';
                     echo '<h3>'.$value['mARG_titre'] . '</h3>';
                     echo '<p>Parrution : ' . $value['mARG_annee'] . '</p>';
@@ -29,6 +30,7 @@ require('header.php');
                     echo '<p>Résumé: ' . $value['mARG_desc'] . ' </p>';
                     echo '<p>Popularité: ' . $value['mARG_popularitee'] . ' </p>';
                     echo '<p class="crea"> de ' . $value['crea_nom'] . '</p>';
+                    echo '</div>';
                     echo '<hr>';
                 }
         ?>

@@ -11,9 +11,9 @@ body{
     color:rgb(255, 255, 255);
     min-width:360px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    margin:0 auto;
+    
     position: absolute;
     top:16%;
     width: 100%;
@@ -41,6 +41,8 @@ body{
     position: fixed;
     width: 100%;
     top:0;
+    margin: 0;
+    right: -8px;
     z-index: 3;
   }
   
@@ -374,6 +376,16 @@ h1{
 h3{
     font-size:18px;
     margin: 5px 0px;
+}
+.card{
+  width: 350px;
+background-color: #581414;
+border-radius: 8%;
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+height:500px;
 }
 
 img { /* Enfant image de tabimg pour les données */

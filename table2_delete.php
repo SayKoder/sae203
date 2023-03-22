@@ -11,7 +11,7 @@
 // Appel du bloc Header et du Menu>
 require('header.php');
 ?>
-<a href="../table1_gestion.php">retour au tableau de bord</a> 	
+<a href="../table2_gestion.php">retour au tableau de bord</a> 	
 <hr> <h1>gestion de nos albums</h1> <hr>
 
 <?php
@@ -22,14 +22,14 @@ $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203U
 $mabd->query('SET NAMES utf8;');
 
 // tapez ici la requete de suppression de l'album dont l'id est passé dans l'url
-$req = 'DELETE  FROM mythes WHERE mARG_id='. $album; 
+$req = 'DELETE  FROM createur WHERE crea_id='. $album; 
 
 // cette ligne sert juste pour le debug. à supprimer quand tout marche correctement  
 echo $req;
  
 $resultat = $mabd->query($req);
 
-echo '<h2>Vous venez de supprimer le Mythe numéro '.$album.'</h2>';
+echo '<h2>Vous venez de supprimer le Créateur numéro '.$album.'</h2>';
 ?>
 
 <?php

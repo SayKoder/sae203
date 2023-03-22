@@ -24,20 +24,20 @@
         require('header.php');
 ?>
         
-        <div>
+        <div class="rep">
             <h1> Bienvenue dans les tréfonds ! </h1>
                 <?php
                 echo '<p>Ton ou tes résultat(s) : '.$search_nettoye.'</p>'."\n";
                 $prixmax = $_GET['search'];
                 $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'CarlPHP02#');
                 $mabd->query('SET NAMES utf8;');
-                $req = "SELECT * FROM Mythes
-                            INNER JOIN Createur
-                            ON Mythes._crea_id = Createur.crea_id
+                $req = "SELECT * FROM mythes
+                            INNER JOIN createur
+                            ON mythes._crea_id = createur.crea_id
                             WHERE mARG_titre LIKE '%" .$search. "%'";
                 $resultat = $mabd->query($req);
                 foreach ($resultat as $value) {
-                    echo '<img class="dimg" src=images/'.$value['mARG_photo'].'>';
+                    echo '<img class="dimg" src=images/uploads/'.$value['mARG_photo'].'>';
                     echo '<h3>'.$value['mARG_titre'] . '</h3>';
                     echo '<p>Parrution : ' . $value['mARG_annee'] . '</p>';
                     echo '<p class="type">' . $value['mARG_type'] . ' </p>';

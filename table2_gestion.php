@@ -18,29 +18,27 @@ require('header.php');
 <h1>Gestion des données du site</h1>
 <p>pensez a proteger le dossier admin avec un htaccess :-)</p>
 <hr>
-<a href="table1_new_form.php">Ajouter un ARG/Mythe</a>
+<a href="table2_new_form.php">Ajouter un créateur</a>
 <table border=1>
 	<thead>
-		<tr><td>titre</td><td>Année</td><td>Type</td><td>Description</td><td>Popularitée</td><td>Images</td><td>supprimer</td><td>modifier</td></tr>
+		<tr><td>ID</td><td>Nom</td><td>Plateforme</td><td>Nationalitee</td><td>supprimer</td><td>modifier</td></tr>
 	</thead>
     <tbody>
 <?php
 $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'CarlPHP02#');
 $mabd->query('SET NAMES utf8;');
-$req = "SELECT * FROM mythes";
+$req = "SELECT * FROM createur";
 $resultat = $mabd->query($req);
 
 foreach ($resultat as $value) {
     echo '<tr>' ;
-    echo '<td>'.$value['mARG_titre'] . '</td>';
-    echo '<td>' . $value['mARG_annee'] . '</td>';
-    echo '<td>' . $value['mARG_type'] . '</td>';
-    echo '<td>' . $value['mARG_desc'] . '</td>';
-    echo '<td>' . $value['mARG_popularitee'] . '</td>';
-    echo '<td>' .$value['mARG_photo']. '</td>';
+    echo '<td>'.$value['crea_id'] . '</td>';
+    echo '<td>' . $value['crea_nom'] . '</td>';
+    echo '<td>' . $value['crea_plateforme'] . '</td>';
+    echo '<td>' . $value['crea_nationalitee'] . '</td>';
 
-    echo '<td> <a href="table1_delete.php?num='.$value['mARG_id'].'""> supprimer </a> </td>';
-    echo '<td> <a href="table1_update_form.php?num='.$value['mARG_id'].'"" > modifier </a> </td>';
+    echo '<td> <a href="table2_delete.php?num='.$value['crea_id'].'""> supprimer </a> </td>';
+    echo '<td> <a href="table2_update_form.php?num='.$value['crea_id'].'"" > modifier </a> </td>';
 
     echo '</tr>';
 }

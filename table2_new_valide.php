@@ -5,33 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Suppression Album</title></head>
+	<title>Validation</title>
+</head>
 <body>
 <?php
 // Appel du bloc Header et du Menu>
 require('header.php');
 ?>
-<a href="../table1_gestion.php">retour au tableau de bord</a> 	
-<hr> <h1>gestion de nos albums</h1> <hr>
-
+<a href="../table2_gestion.php">retour au tableau de bord</a> 	
+	<hr>
+<h1>Gestion de nos histoires</h1>
+<p>Vous venez d'ajouter une nouvelles histoire</p>
+<hr>
 <?php
-// recupérer dans l'url l'id de l'album à supprimer
-$album=$_GET['num'];
+$id=$_POST['id'];
+$nom=$_POST['nom'];
+$plateforme=$_POST['plt'];
+$nationalitee=$_POST['ntl'];
 
 $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'CarlPHP02#');
 $mabd->query('SET NAMES utf8;');
 
-// tapez ici la requete de suppression de l'album dont l'id est passé dans l'url
-$req = 'DELETE  FROM mythes WHERE mARG_id='. $album; 
 
-// cette ligne sert juste pour le debug. à supprimer quand tout marche correctement  
-echo $req;
- 
+$req = 'INSERT INTO createur(crea_id,crea_nom,crea_plateforme,crea_nationalitee) 
+        VALUES("'.$id.'","'.$nom.'", "'.$plateforme.'","'.$nationalitee.'")';
+
+
 $resultat = $mabd->query($req);
 
-echo '<h2>Vous venez de supprimer le Mythe numéro '.$album.'</h2>';
 ?>
-
+</tbody>
+</table>
 <?php
 // Appel du Pied de Page
 require('footer.php');
