@@ -17,7 +17,7 @@ require('header.php');
 <main>
     <section>
         <div class="partage">
-            <img src="images/Feldup.png" alt="Feldup" id="felimg">
+            <img src="images/uploads/Feldup.png" alt="Feldup" id="felimg">
             <div class="txt">
                 <h2>Feldup, pionier FR dans l'explication des ARG et des Mythes horrifique</h2>
                 <p>Feldup est un YouTubeur français de plus d'un million d'abonnés (1.9m). Il fait principalement des vidéos parlant du monde de l'horreur, 
@@ -33,7 +33,7 @@ require('header.php');
             </div>
         </div>
         <div class="partage">
-            <img src="images/PARADOX.jpg" alt="">
+            <img src="images/uploads/PARADOX.jpg" alt="">
             <div class="txt">
                 <h2>JHVSDFJKSNVHBVISQJDVKBJDN</h2>
                 <p>wdfnjxnvklvkdb,dklb,; klbnkpbk kl;djnf cxjn,dx,nd,v;c,bkid,b , kc,idfb,; vbk,l:;bn,</p>
