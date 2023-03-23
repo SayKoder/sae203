@@ -18,10 +18,10 @@ require('header.php');
     <input type="text" name="search" placeholder="Recherche...">
     <button type="submit">Rechercher</button>
     <?php
-                    if (empty($_GET['erreur'])) {
-                        echo 'Erreur, veuillez réer';
-                    }
-                ?>
+        if (isset($_GET['erreur']) && $_GET['erreur'] == 'vide') {
+            echo '<p style="color:red;">Erreur : le champ de recherche est vide.</p>';
+        }
+    ?>
   </form>
 </div>
 

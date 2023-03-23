@@ -14,6 +14,7 @@
 require('header.php');
 
 ?>
+<main><h1> Bienvenue dans les tréfonds :</h1></main>
 <?php
     $mabd = new PDO('mysql:host=localhost;dbname=sae203Base;charset=UTF8;', 'sae203User', 'CarlPHP02#');
                 $mabd->query('SET NAMES utf8;');

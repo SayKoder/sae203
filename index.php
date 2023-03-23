@@ -16,6 +16,7 @@ require('header.php');
 
 <main>
     <section>
+        <h1>Pour plus approfondir les sujets :</h1>
         <div class="partage">
             <img src="images/uploads/Feldup.png" alt="Feldup" id="felimg">
             <div class="txt">
@@ -35,8 +36,10 @@ require('header.php');
         <div class="partage">
             <img src="images/uploads/PARADOX.jpg" alt="">
             <div class="txt">
-                <h2>JHVSDFJKSNVHBVISQJDVKBJDN</h2>
-                <p>wdfnjxnvklvkdb,dklb,; klbnkpbk kl;djnf cxjn,dx,nd,v;c,bkid,b , kc,idfb,; vbk,l:;bn,</p>
+                <h2>PARADOX</h2>
+                <p>PARADOX est un youtuber qui approfondis le sujet sur le thème du paranormal des creepy pasta et encore du gore sur le darknet 
+                    ou des histoires de ce type. Le tous est traité intelligement et avec professionnalisme
+                </p>
 
             </div>
             <div class="illu">

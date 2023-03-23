@@ -35,7 +35,7 @@ $mabd->query('SET NAMES utf8;');
         WHERE crea_id ='$num'";
 
 
-echo 'juste pour le debug: '. $req;
+
 $resultat = $mabd->query($req);
 
 ?>

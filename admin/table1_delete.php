@@ -24,8 +24,6 @@ $mabd->query('SET NAMES utf8;');
 // tapez ici la requete de suppression de l'album dont l'id est passé dans l'url
 $req = 'DELETE  FROM mythes WHERE mARG_id='. $album; 
 
-// cette ligne sert juste pour le debug. à supprimer quand tout marche correctement  
-echo $req;
  
 $resultat = $mabd->query($req);
 

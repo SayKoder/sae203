@@ -16,7 +16,7 @@ require('../header.php');
 <a href="admin.php">Retour aux gestion des tréfonds</a> 	
 	<hr>
 <h1>Gestion des données du site</h1>
-<p>pensez a proteger le dossier admin avec un htaccess :-)</p>
+
 <hr>
 <a href="table2_new_form.php">Ajouter un créateur</a>
 <table border=1>

@@ -76,7 +76,6 @@ else{
 
 }
 
-echo 'juste pour le debug: '. $req;
 $resultat = $mabd->query($req);
 
 ?>

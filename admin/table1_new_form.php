@@ -12,13 +12,15 @@
 // Appel du bloc Header et du Menu>
 require('../header.php');
 ?>
+<main>
 <a href="admin.php">Retour au tableau de données</a> 
 <hr>
 <h1>Gestion de nos histoires</h1>
 <p>Ajouter une nouvelles histoire</p>
 <hr>
 
-<form action="table1_new_valid.php" method="POST" enctype="multipart/form-data">
+
+<form  action="table1_new_valid.php" method="POST" enctype="multipart/form-data">
     Titre:<input type="text" name="titre"><br>
     Année:<input type="year" name="annee" min="0" max="2023"><br>
     Description:<input type="text" name="desc"><br>
@@ -45,10 +47,11 @@ require('../header.php');
 	
 <input type="submit" name="Ajouter">
 </form>
-    
+    </div>
 
 </tbody>
 </table>
+    </main>
 <?php
 // Appel du Pied de Page
 require('../footer.php');

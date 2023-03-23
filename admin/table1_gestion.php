@@ -16,7 +16,7 @@ require('../header.php');
 <a href="admin.php">Retour aux gestion des tréfonds</a> 	
 	<hr>
 <h1>Gestion des données du site</h1>
-<p>pensez a proteger le dossier admin avec un htaccess :-)</p>
+
 <hr>
 <a href="table1_new_form.php">Ajouter un ARG/Mythe</a>
 <table border=1>
@@ -32,6 +32,7 @@ $resultat = $mabd->query($req);
 
 foreach ($resultat as $value) {
     echo '<tr>' ;
+    echo '<td><img style"width: 200px; height:200px;" , src="../images/uploads/'.$value['mARG_photo'] . '" alt="photo"></td>';
     echo '<td>'.$value['mARG_titre'] . '</td>';
     echo '<td>' . $value['mARG_annee'] . '</td>';
     echo '<td>' . $value['mARG_type'] . '</td>';
