@@ -14,8 +14,7 @@ require('header.php');
 ?>
 <a href="table1_gestion.php">retour au tableau de bord</a> 	
 	<hr>
-<h1>Gestion de nos histoires</h1>
-<p>Vous venez d'ajouter une nouvelles histoire</p>
+<h1>Vous venez d'ajouter une nouvelles histoire</h1>
 <hr>
 <?php
 $titre=$_POST['titre'];

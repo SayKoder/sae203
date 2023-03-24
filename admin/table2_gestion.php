@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Administration</title>
 </head>
+<style>
+    body{
+        background-color: black;
+        color:rgb(255, 255, 255);
+        min-width:360px;
+        position: absolute;
+        display:unset;
+        top:16%;
+        width: 100%;
+    }
+</style>
 <body>
 <?php
 // Appel du bloc Header et du Menu>

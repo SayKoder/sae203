@@ -15,7 +15,7 @@
     <li><a href="../index.php">Accueil</a></li>
     <li><a href="../listing.php">Mythes/ARG</a></li>
     <li><a href="../form_recherche.php">Recherche</a></li>
-    <li><a href="admin/admin.php">Administration</a></li>
+    <li><a href="../admin/admin.php">Administration</a></li>
 
   </ul>
 

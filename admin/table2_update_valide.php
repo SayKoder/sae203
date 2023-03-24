@@ -14,8 +14,8 @@ require('../header.php');
 ?>
 <a href="table2_gestion.php">retour au tableau de bord</a> 	
 	<hr>
-<h1>Gestion de nos Créateurs</h1>
-<p>Vous venez de modifier un Créateur</p>
+<h1>Vous venez de modifier un Créateur</h1>
+
 <hr>
 
 <?php

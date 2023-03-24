@@ -12,7 +12,7 @@
 require('../header.php');
 ?>
 <a href="table2_gestion.php">retour au tableau de bord</a> 	
-<hr> <h1>gestion de nos albums</h1> <hr>
+ <h1>Vous avez supprimé le créateur : n°</h1> 
 
 <?php
 // recupérer dans l'url l'id de l'album à supprimer
@@ -27,7 +27,7 @@ $req = 'DELETE  FROM createur WHERE crea_id='. $album;
  
 $resultat = $mabd->query($req);
 
-echo '<h2>Vous venez de supprimer le Créateur numéro '.$album.'</h2>';
+echo '<h1>' .$album. '</h1>';
 ?>
 
 <?php
